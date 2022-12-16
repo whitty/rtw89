@@ -4,7 +4,7 @@ rtw89
 
 This branch was created from the version merged into the wireless-drivers-next
 repo, which is in the 5.16 kernel. IF YOU USE DRIVERS FROM THIS REPO FOR KERNELS
-5.16+, TOU MUST BLACKLIST THE KERNEL VERSIONS!!!! FAILING TO DO THIS WILL RESULT
+5.16+, YOU MUST BLACKLIST THE KERNEL VERSIONS!!!! FAILING TO DO THIS WILL RESULT
 IN ALL MANNER OF STRANGE ERRORS.
 
 This code will build on any kernel 5.7 and newer as long as the distro has not modified
@@ -85,7 +85,7 @@ Reboot then retry from the step make sign-install
 sudo modprobe -rv rtw_8852ae
 sudo modprobe -rv rtw_core	     #These two statements unload the module
 
-Doe to the behavior of the modprobe utility, it takes both to unload.
+Due to the behavior of the modprobe utility, it takes both to unload.
 
 sudo modprobe -v rtw_8852ae          #This loads the module
 
@@ -178,3 +178,13 @@ sudo apt install ../rtw89-dkms_1.0.2-2_all.deb ../rtw89-firmware_1.0.2-2_all.deb
 That should install the package, and build the module for your
 currently active kernel.  You should then be able to `modprobe` as
 above.
+
+```bash
+Missing firmware for RTW8852BE
+
+Thae necessary firmwar3e file should be in package firmware-realtek of linux-firmware-realtek;
+however some versions of some distros have been extremely slow to pick up this firmware file,
+even though it has been in the official linux-firmware repo at vger.kernel.org since
+Oct. 27, 2022. If your distro is one of these, you can download the firmware from
+https://lwfinger.com/download/rtw8852b_fw.bin, and copy it to /lib/firmware/rtw89/.
+```
