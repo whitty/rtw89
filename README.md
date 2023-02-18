@@ -1,3 +1,21 @@
+NOTE - this is a fork of the repository at https://github.com/lwfinger/rtw89
+
+It exists to track the official repository while still providing a
+one-stop shop for building packages for Ubuntu LTS.
+
+The differences are:
+
+* debian packaging - set up for a Ubuntu PPA
+* includes the firmware files that have been removed upstream - this
+  allows packaging in case your distribution's `linux-firmware`
+  package isn't up to date.
+
+The easiest way to use this is through the ppa at https://launchpad.net/~greg-whiteley/+archive/ubuntu/rtw89
+
+If you have any issues with the PPA feel free to log them here.  Other
+issues belong upstream or on the offical linux wireless-next project.
+
+
 rtw89
 ===========
 ### A repo for the newest Realtek rtlwifi codes.
